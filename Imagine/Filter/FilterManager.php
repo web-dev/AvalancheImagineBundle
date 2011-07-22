@@ -56,4 +56,14 @@ class FilterManager
 
         return $this->loaders[$options['type']]->load($options['options']);
     }
+
+    /**
+     * Gets the names of all the filters registered in this manager
+     *
+     * @return array of Filter Names
+     */
+    public function getFilterNames()
+    {
+        return array_keys($this->filters);
+    }
 }
